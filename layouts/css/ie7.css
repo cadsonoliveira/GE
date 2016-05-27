@@ -1,0 +1,27 @@
+#topo h1{
+	font-size:2.01em;
+}
+
+#conteudo{
+	padding:0 1%;
+}
+
+#dropshadow{
+	margin:0;
+}
+
+#fundoRodape{
+	margin-left:-1%;
+}
+
+#sombraEsq {
+	background:none;
+}
+
+#sombraDir {
+	background:none;
+}
+
+.submenu>li{
+	margin:0 !important;
+}

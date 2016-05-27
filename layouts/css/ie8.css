@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS para Internet Explorer 8 */
+
+#sombraEsq {
+	background:none;
+}
+
+#sombraDir {
+	background:none;
+}
+
+.submenu>li{
+	margin:0 !important;
+}
+
+table{
+	border: 1px solid #3A889D;
+}
+
+thead tr th {
+	border:1px solid #FFF;
+}
+
+thead:after {
+    content:"";
+}
+
+#calendario, #agendamento, .tabelaDentes{
+	border:none;
+}
+
+#boxfiltroTratamentos{
+	overflow:hidden;
+	float:left;
+}

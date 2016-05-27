@@ -1,0 +1,2080 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+ 
+html, body { height: 100%;}
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color: #333; }
+
+body { margin: 0; font-size: 0.875em; line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, input { line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], input[disabled] { cursor: default; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: separate; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+/* ==|== primary styles =====================================================
+   Author: Leandro Guimarães dos Santos & Tiago Porto Pereira
+   ========================================================================== */
+
+
+input, select {
+	border:1px solid #DADADA;
+	padding:3px 3px;
+}
+
+input[type="checkbox"]:focus, input[type="radio"]:focus{
+	border-width:1px;
+	outline:dotted thin;
+}
+
+.itensObrigatorios{
+	color:#FF0000;
+}
+
+input.tamanho{
+	width:153px;
+}
+
+/*LOGIN ESQUECI SENHA*/
+
+#telaLogin, #telaEsqueciSenha{
+	background:url(../img/background_login.jpg) repeat;
+}
+
+#boxFloat{
+	margin-bottom: -155px; /* half of content height */
+	width: 1px;           /* required to "hide" distance div */
+	height: 50%;          /* required */
+	float: left;  
+}
+
+#boxLogin{
+	position:relative;
+	background:url(../img/box_login.png) no-repeat 0 34px;
+	width:457px;
+	height:345px;
+	margin:auto;
+	clear: left;
+	z-index:1;
+}
+
+#boxLogin h1{
+	margin-left:29px;
+}
+
+#telaLogin form, #telaEsqueciSenha form{
+	text-align:right;
+	padding:0 85px 0 40px;
+	
+}
+
+#telaLogin legend, #telaEsqueciSenha legend{
+	color:#39879D;
+	font-size:1.786em;
+	width:103%;
+	margin-bottom:10px;
+	text-align:right;
+}
+
+#telaEsqueciSenha legend{
+	font-size:1.286em;
+}
+
+#telaLogin label, #telaEsqueciSenha label{
+	color:#39869D;
+}
+
+#telaEsqueciSenha label{
+	float:left;
+	margin-left: 19px;
+}
+
+#telaLogin input{
+	width:270px;
+	border:1px dashed #39869D;
+	margin-bottom:20px;
+	padding:5px;
+}
+
+#telaEsqueciSenha input{
+	width:300px;
+	border:1px dashed #39869D;
+	margin:10px 0 40px 0;
+	padding:5px;	
+}
+
+#telaLogin a, #telaEsqueciSenha a{
+	font-size:0.857em;
+	color:#9E191D;	
+}
+
+#telaLogin a:hover, #telaEsqueciSenha a:hover{
+	color:#E1464A;	
+}
+
+#telaLogin button, #telaEsqueciSenha button{
+	width:275px;
+	height:26px;
+	font-size:0.857em;
+	background-color:#003F6D;
+	border:none;
+	color:#FFF;
+	
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius:7px;
+	behavior:url(js/PIE.htc);	
+}
+
+#telaEsqueciSenha button{
+	width:310px;
+}
+
+#boxFeedbackLogin{
+	background:url(../img/box_feedback_login.png) top center no-repeat;
+	width:348px;
+	height:95px;
+	margin:-130px auto 0 auto;
+	padding:5px 40px 0 30px;
+	color:#FFF;
+	display:none;
+	position:relative;
+	z-index:0;
+	clear:both;
+}
+
+.boxFeedbackLoginShow{
+	display:block !important;
+}
+
+
+#atencaoFeedback{
+	font-size:1.429em;
+	margin:0;
+}
+
+#feedback{
+	font-size:0.929em;
+	margin:0;
+}
+
+/*MENU SUPERIOR*/
+
+#tudo {
+	min-height: 100%;
+	position:relative;
+	background:#5CAFC5 url(../img/pattern_topo.png) repeat-x;
+	overflow:hidden;
+	min-width:1200px;
+}
+
+#topo {
+	background:url(../img/background_menu.jpg) no-repeat;
+	height:75px;
+	border-bottom:1px solid #39889D;
+}
+
+#topo h1 {
+	display: inline;
+    float: left;
+    height: 66px;
+    left: 20px;
+    margin:6px 0 0 0;
+    position: relative;
+	width:260px;
+}
+
+#infoUsuario {
+	width:620px;
+	height:100%;
+	float:right;
+}
+
+#boxPerfil {
+	height:23px;
+	width:620px;
+	text-align:right;
+	background:url(../img/alfinete_gradient.png) repeat-y;
+	margin:0;
+	padding-top:3px;
+	color: #FFF;
+	font-size: 1em;
+}
+
+#boxPerfil a {
+	color: #FFF;
+	font-size: 1em;
+	text-decoration:none;
+	margin-right:30px;
+}
+
+#boxPerfil a:hover {
+	color: #FC9505;
+}
+
+#boxStatus {
+    background: url("../img/box_status.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    font-size: 0.857em;
+    height: 40px;
+    margin: 5px 0 0;
+    padding: 23px 0 0 18px;
+    width: 210px;
+}
+
+#boxStatus p {
+	font-size: 0.857em;
+    margin: 24px 10px 0 15px;
+}
+
+#menu {
+	background:url(../img/alfinete_menu.png) repeat-x;
+	clear:left;
+	margin:0;
+	padding:0;
+	border-bottom:1px solid #FFF;
+	border-top:1px solid #FFF;
+}
+
+#menu ul {
+	background:#fff;
+	background:rgba(255,255,255,0); 
+	list-style:none;
+	position:absolute;
+	left:-9999px;
+	clear:left;
+	margin:0;
+	padding:0;
+}
+
+#menu li#menuAdjacente{
+	float:right;
+	position:relative;
+	display:inline;
+	clear:right;
+	width:299px;
+}
+
+#menu li#menuAdjacente > ul {
+	background:url(../img/menu_direito.png) no-repeat;
+	margin-right:20px;
+	width:299px;
+	left:0;
+}
+
+#menu li#menuAdjacente li{
+	float:left;
+}
+
+#menu li {
+	float:left;
+	margin:0 2px 0 0;
+	position:relative;
+	list-style:none;
+}
+
+#menu a {
+	color: #FFFFFF;
+    display: block;
+    font-size: 1.071em;
+    padding: 7px 20px;
+    text-decoration: none;
+}
+
+#menu > li > a:hover, .menuSelected {
+	color:#FC9505 !important;
+	border-left:1px solid #7493B0 !important;
+	border-right:1px solid #7493B0 !important;
+	padding: 7px 19px !important;
+	background:#15415A;
+}
+
+#estatisticas {
+	margin:0 0 0 22px !important;
+    padding: 0;
+}
+
+#estatisticas a{
+	padding: 7px 18px !important;
+}
+
+#estatisticas a:hover {
+	color:#FC9505;
+	border:none;
+	padding: 7px 18px !important;
+}
+
+#estatisticas a.menuSelected{
+	border:none;
+	padding: 7px 17px !important;
+}
+
+#config {
+	padding:0;
+	margin:0 !important;
+}
+
+#config li{
+	width:100%;
+}
+
+#config  a {
+	border:none;
+	margin:0 !important;
+	padding:7px 14px !important;
+}
+
+#config a:hover {
+	padding:7px 14px !important;
+	color:#FC9505;
+	border:none;
+	margin:0;
+}
+
+#config > a.menuSelected{
+	padding:7px 13px !important;
+}
+
+#menuPlanosdeSaude, #menuPacientes, #config > a{
+	cursor:default;
+}
+
+a.submenuPacientes:hover, a.submenuPlanos:hover{
+	padding:7px 20px !important;
+	color:#FC9505 !important;
+}
+
+.submenu {
+	z-index:2;
+}
+
+.submenu a {
+	border-top:1px solid #FFF;
+	margin:0 !important;
+}
+
+.submenu a:hover {
+	border-left:none !important;
+	border-right:none !important; 
+	padding: 7px 20px !important;
+}
+
+#menu > li:hover > ul, #menu li#config:hover  ul  {
+	left:0;
+}
+
+#menu .menuHover:hover a{
+	background:#15415A;
+}
+
+#menu .menuHover:hover ul a{
+	background:#003F5E;
+}
+
+#config .submenu a{
+	border-top:1px solid #FFFFFF;
+}
+
+#menu ul li {
+	float:none;
+}
+
+#conteudo {
+	background-color:#FC0;
+	clear:left;
+	border-top:1px solid #333333;
+	background:url(../img/alfinete_conteiner.png) repeat-x;
+	z-index:5;
+}
+
+/*PAINEL PACIENTES*/
+
+#paciente {
+	margin:20px 20px 0 20px;
+}
+
+#paciente img {
+	float:left;
+	margin-right:20px;
+}
+
+#paciente p, #paciente a {
+	margin:0;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+#paciente a:hover, #paciente a.selectDadosPaciente{
+	color:#FC9505;
+}
+
+#paciente form, .floatRight{
+	float:right;
+}
+
+#paciente input {
+	width:465px;
+}
+
+#dropshadow {
+	-moz-box-shadow: 2px 8px 10px #000;
+	-webkit-box-shadow: 2px 8px 10px #000;
+	box-shadow: 2px 8px 10px #000;
+	margin:0 1%;
+	width:98%;
+}
+
+button#botaoExcluiFoto{
+	background:#660000;
+}
+
+a#trocarPaciente{
+	position:absolute;
+	right:17px;
+	margin-top:-20px;
+	font-weight:bold;
+	font-size:1.143em;
+	letter-spacing:0.07em;
+}
+
+/*BREADCRUMB*/
+
+#breadcrumb {
+	height:28px;
+	background:url(../img/alfinete_breadcrumb.png) repeat-x;
+	padding:6px 0 0 0;
+	margin:20px 0 0 0;
+	width:100%;
+}
+
+#breadcrumb a, .bcrumbAtivo {
+	background:url(../img/breadcrumb_meio.png) repeat-x;
+	text-decoration: none;
+	float:left;
+	padding:2px 15px 2px 15px;
+	font-weight:bold;
+	font-size:0.929em;
+	color:#FFF;
+	margin:0;	
+}
+
+.breadcrumbEsquerda {
+	display:block;
+	width:10px;
+	height:22px;
+	background:url(../img/breadcrumb_inicio.png);
+	float:left;
+}
+
+.breadcrumbDireita {
+	display:block;
+	width:11px;
+	height:22px;
+	background:url(../img/breadcrumb_fim.png);
+	float:left;
+}
+
+#breadcrumb li, #breadcrumb ul {
+	float: left;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+#breadcrumb > ul{
+	padding-left:10px;
+}
+
+.bcrumbSelect {
+	background-position:0 -23px;
+}
+
+#container {
+	clear:both;
+	background:#FFFFFF;
+	margin:0 0 -1000px 0;
+	padding: 20px 2% 1100px 2%;
+	height:100%;
+	position:relative;
+	width:96%;
+	z-index:1;
+}
+
+/*HOME*/
+
+#conteudoHome {
+	width:50%;
+	padding:0 0 100px 0;
+	text-align:center;	
+	margin:auto;
+	z-index:0;
+}
+
+#conteudoHome p {
+	font-size:0.929em;
+	color: #333;
+	margin: 0 0 10px 0;
+	padding:0px;
+	text-align:justify;
+}
+
+#conteudoHome h3 {
+	margin: 0 0 10px 0;
+	padding:0px;
+	color:#19839A;
+	font-weight:bold;
+	font-size:1.571em;
+	text-align:left;
+}
+
+#conteudoHome button{
+	width:140px;
+	height:25px;
+	margin-top:20px;
+}
+
+/*LISTA PACIENTES*/
+
+#filtros{
+	clear:both;
+	position:relative;
+	margin:0;
+	color:#FFFFFF;
+	background:#198399;
+	width:428px;
+	height:32px;
+	padding:0 0 0 20px;
+	font-size:1.571em;
+	font-weight:bold;
+}
+
+.boxLista {
+	background:#EAF2F4;
+	padding: 10px;
+	height: 20px;
+	border-top: 2px dashed #BDD2D7;
+	margin: -2px 0 30px;
+	text-align:right;
+	font-size:1em;
+}
+
+#listaBusca {
+	margin:0 25px 0 0;
+	padding:10px;
+	color:#005279;
+	display:inline;
+	text-decoration:none;
+	line-height:23px;
+}
+
+#listaBusca p {
+	font-size:0.857em;
+	color:#005279;
+}
+
+#listaBusca a {
+	color:#54ABBF;
+	display:inline;
+	text-decoration:none;
+	margin-right:1px;
+	padding:0 3px;
+}
+
+#listaBusca a:hover {
+	color:#005279;
+}
+
+#listaBusca span{
+	padding:0 3px;
+	margin-right:1px;
+}
+
+#resultadosPagina {
+	color:#005279;
+	margin:0 !important;
+}
+
+#todos {
+	color:#005279 !important;
+}
+
+
+#container form p {
+	margin:0;
+}
+
+#exibirResultados {
+	float:right;
+}
+
+table {
+	clear:both;
+	width:100%;
+	padding:0;
+}
+
+thead{
+	border:1px solid #FFF;
+}
+
+thead:after {
+    line-height:0;
+    content:"-";
+    color:#FFF; /* to hide text */
+    display:block;
+}
+
+thead tr th {
+	background:#198399;
+	color:#FFF;
+	font-size:0.929em;
+	font-weight:bold;
+	border-right:2px solid #FFF;
+	padding:3px 0;
+	
+}
+
+tbody {
+	border:solid 1px #3A889D;
+}
+
+thead, tbody{
+	display:table;
+	width:100%;
+}
+
+.numero {
+	width:5%;
+}
+
+.pacientes {
+	width:65%;
+	text-align:left;
+	padding-left:30px;
+}
+
+.pacientes, .habilitaHoverTabela tbody td{
+	cursor:pointer;
+}
+
+.ultimaConsulta {
+	width:15%;
+	cursor:pointer;
+}
+
+.opcoes {
+	width:12%;
+	min-width:155px;
+}
+
+tbody td {
+	padding:5px 0;
+	text-align:center;
+	border:solid 1px #FFFFFF;
+}
+
+tbody td a {
+	float:left;	
+	width:16px;
+	height:16px;
+	margin:0 5px;
+}
+
+tbody td a:hover{
+	width:20px;
+	height:19px;
+	margin:0 3px;
+	background-size:contain;
+}
+
+.tabelaDentes td a:hover{
+	margin:0;
+	width:100%;
+	height:16px;
+}
+
+.habilitaHoverTabela tbody tr:hover {
+	background:#FDAE44;
+	color:#FFFFFF;
+}
+
+.tableColor1 {
+	background:#E9E9E9;
+}
+
+.tableColor2 {
+	background:#CCCCCC;	
+}
+
+.alinhamentoPacientes {
+	padding-left: 30px;
+    text-align: left;
+}
+
+a.editar {
+	background:url(../img/edit.gif) no-repeat;
+}
+
+a.agendar {
+	background:url(../img/Date.gif) no-repeat;
+}
+
+a.tratamentos {
+	background:url(../img/teeth.gif) no-repeat;
+}
+
+a.anammesia {
+	background:url(../img/anamnese.png) no-repeat;
+}
+
+a.documentos {
+	background:url(../img/folder.gif) no-repeat;
+	cursor:pointer;
+}
+
+a.visualizarDocumentos {
+	background:url(../img/image.gif) no-repeat;
+}
+
+a.excluir {
+	background:url(../img/delete.gif) no-repeat;
+}
+
+#paginacao {
+	font-size:0.929em;
+	color:#005279;
+}
+
+#navegacaoPaginas {
+	margin: auto;
+    width: 500px;
+}
+
+#navegacaoPaginas p {
+	text-align:center;
+}
+
+#navegacaoPaginas a{
+	cursor:pointer;
+}
+
+#navegacaoPaginas a, #navegacaoPaginas span {
+	margin:0 5px;
+	text-decoration:none;
+	color:#52ABBF;
+	font-size:1.429em;
+}
+
+#navegacaoPaginas a:hover, #navegacaoPaginas span {
+	margin:0 5px;
+	text-decoration:none;
+	color:#005279;
+	font-size:1.429em;
+}
+
+#navegacaoPaginas button{
+	margin:0 20px;
+}
+
+button, #uploadButton, #botoesFormulario a{
+	background:#003F6D;
+	border:none;
+	padding:3px 10px;
+	color:#FFFFFF;
+	position:relative;
+	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	behavior:url(js/PIE.htc);		
+}
+
+button:hover, button:focus, #botoesFormulario a:hover{
+	background:#33658A;
+}
+
+/*CADASTRO DE PACIENTES*/
+
+span#fotoajax{
+	background:url(../img/usuario_foto.png) no-repeat;
+	width:63px;
+	height:63px;
+	display:block;	
+	float:left;
+	overflow:hidden;
+}
+
+span#uploadButton{
+	display:inline;
+	overflow:hidden;
+	position:absolute;
+	clip:rect(top right bottom left);
+	margin-top:20px;
+	height:18px;
+}
+
+#inputFile{
+	cursor:pointer;
+	position:absolute;
+	left:-30px;
+	
+	opacity:0;
+	-moz-opacity:0;
+	filter: alpha(opacity=0);
+}
+
+#botaoCapturar{
+	margin:20px 0 0 117px;
+}
+
+.espacamentoEsquerda {
+	margin-left:20px;
+}
+
+#container form p#obsImagem{
+	margin:5px 0 0 83px;
+	color:#666;
+}
+
+.dadosPaciente {
+	margin:0;
+}
+
+.dadosPaciente #estado{
+	width:223px;
+}
+
+.dadosPaciente div {
+	display:block;
+	margin:10px 0;
+}
+
+.dadosPaciente label, .dadosUsuario label {
+	width:150px;
+	text-align:right;
+	display:block;
+	clear: both;
+    float: left;
+    margin: 3px 10px 0 0 !important;
+}
+
+
+.campoSexo, .campoEspecialidade {
+	display: inline !important;
+    float: none !important;
+}
+
+.exibicaoContinua {
+	display: inline !important;
+    float: none !important;
+}
+
+.ultimosDigitos {
+	width:50px;
+}
+
+/*ANAMNESE*/
+
+#totalRegistros {
+	font-size:1em;
+	color:#00537A;
+	float:right;
+	margin-bottom:10px !important;
+}
+
+.tituloBox {
+	clear:both;
+	position:relative;
+	margin:0;
+	color:#FFFFFF;
+	background:#198399;
+	width:456px;
+	height:32px;
+	padding:0 0 0 20px;
+	font-size:1.571em;
+	font-weight:bold;
+}
+
+fieldset {
+	margin-bottom:20px;
+}
+
+.elementosFormulario {
+	display:block;
+}
+
+#container textarea {
+	min-width:600px;
+	max-width:84%;
+	resize:both;
+}
+
+#container label {
+	margin:5px 20px 5px 0;
+}
+
+#container legend {
+	margin-bottom:5px;
+}
+
+#botaoNegativo {
+	width:245px;
+	height:52px;
+	font-weight:bold;
+	font-size:1.286em;
+	background:#660000;
+	clear:both;
+}
+
+#botaoNegativo:hover, button#botaoExcluiFoto:hover {
+	background:#853333;
+}
+
+.botaoPositivo {
+	width:245px;
+	height:52px;
+	font-weight:bold;
+	font-size:1.286em;
+	clear:both;
+}
+
+#botoesFormulario {
+	display: block;
+    float: none !important;
+    text-align: center;
+}
+
+.listarResultados {
+	float: right !important;
+	width:auto !important;
+	margin-top: -4px;
+}
+
+.formularioDividido {
+	background: none repeat scroll 0 0 #EAF2F4;
+	padding:1%;
+	margin-bottom:30px;
+	border-top: 2px dashed #BDD2D7;
+	margin-top: -2px;
+	overflow:hidden;
+}
+
+/*TRATAMENTOS*/
+#boxfiltroTratamentos{
+	height:auto;
+}
+
+#status_field{
+	width:200px;
+}
+
+/*ATUALIZAÇÃO TRATAMENTO*/
+
+.pic{
+	width:120px;
+	height:120px;
+}
+
+#images{
+	background:#FFF;
+	height:300px;
+	width:98%;
+	overflow:auto;
+	padding:0 10px 10px 10px;
+	margin-bottom:30px;
+	margin-top:0;
+}
+
+.tab_field{
+	margin:0;
+	display:inline;
+	float:left;
+	padding:0;
+}
+
+#listaImagens{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#listaImagens li{
+	float:left;
+	width:160px;
+	text-align:center;
+	margin-top:20px;
+}
+
+#listaImagens li a{
+	background:#DDDDDD;
+	padding:5px 5px;
+	display:block;
+	color:#005279;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+#listaImagens li a:hover{
+	padding:8px 5px;
+	margin-top:-6px;
+}
+
+#listaImagens li .abaSelect, #listaImagens li .abaSelect:hover{
+	padding:10px 5px;
+	background:#FFF;
+	margin-top:-10px;
+	cursor:default;
+}
+
+#images li, #imagens_selecionadas li, #banco_imagens li{
+	float:left;
+	list-style:none;
+	width:120px;
+	height:120px;
+	margin:0 15px 15px 0;
+	display:inline;
+}
+
+#images img, #banco_imagens img{
+	margin:-120px 0 0 0;
+	display:inline;
+	float:left;
+}
+#imagens_selecionadas img{
+	margin:-121px 0 0 0;
+}
+
+
+#images a, #imagens_selecionadas a, #banco_imagens .tools a{
+	width:100%;
+	height:60px;
+	display:block;
+	position:relative;
+	z-index:1;
+}
+a.inserir{
+	background:url(../img/pic_tools_up.png) -120px 0 no-repeat;
+}
+a.inserir:hover{
+	background-position:top center !important;
+}
+
+a.view{
+	background:url(../img/pic_tools_view.png) -120px 0 no-repeat;
+}
+a.view:hover{
+	background-position:top center !important;
+}
+
+a.remove{
+	background:url(../img/pic_tools_remove.png) -120px 0 no-repeat;
+}
+a.remove:hover{
+	background-position:top center !important;
+}
+
+a.zoom{
+	background:url(../img/pic_tools_zoom.png) -130px 0 no-repeat;
+}
+a.zoom:hover{
+	background-position:top center !important;
+}
+
+
+#images li:hover a.inserir, #images li:hover a.remove, #images li:hover a.zoom, #images li:hover a.view,
+#imagens_selecionadas li:hover a.inserir, #imagens_selecionadas li:hover a.remove, #imagens_selecionadas li:hover a.zoom, #imagens_selecionadas li:hover a.view,
+#banco_imagens li:hover a.inserir, #banco_imagens li:hover a.remove, #banco_imagens li:hover a.zoom, #banco_imagens li:hover a.view
+{
+	background-position:bottom center;
+}
+
+/*DADOS TRATAMENTO*/
+
+#dadosTratamento p {
+	margin:0;
+}
+
+#imagens_selecionadas, #banco_imagens{
+	background:#FFF;
+	height:300px;
+	width:98%;
+	overflow:auto;
+	padding:0 10px 10px 10px;
+	margin-bottom:30px;
+	clear:both;
+}
+
+#imagensSelecionadas img{
+	width:120px;
+	height:120px;
+	margin:0  10px 10px -120px;
+	float:left;
+}
+
+#imagensSelecionadas a{
+	display:inline;
+	float:left;
+	position:relative;
+	width:120px;
+	height:120px;
+}
+
+#imagensSelecionadas a:hover{
+		background:url(../img/pic_tools_zoom_large.png) top center no-repeat;
+}
+
+#dadosTratamento, #imagensSelecionadas{
+	background:none;
+}
+
+/*RECEITUARIO*/
+
+#receituarioDestinatarios div {
+	display:block;
+	margin-bottom:5px;	
+}
+
+#outro_email {
+	width:400px;
+}
+
+/*RELATÓRIOS*/
+
+#campoTratamento p {
+	margin:0;
+	font-size:0.929em;
+}
+
+#campoTratamento select {
+	margin-bottom:10px;
+	width:600px;
+}
+
+#dataTermino {
+	margin-bottom:10px !important;
+}
+
+#campoTratamento label {
+	display:block;
+}
+
+.formularioBold {
+	font-weight:bold;
+}
+
+#relatoriosDentista {
+	display:block;
+	margin-bottom: 5px;
+}
+
+#relatoriosSecretaria {
+	display:block;
+	margin-bottom: 5px;
+}
+
+#outro_email {
+	display:block;
+}
+
+/*ESTATÍSTICAS*/
+
+#ativarFiltros {
+	text-align:right;
+	margin:0 0 20px 0 !important;
+}
+
+#ativarFiltros a {
+	text-decoration:none;
+	font-size:0.929em;
+	color:#005279;
+	cursor:pointer;
+}
+
+#ativarFiltros a:hover{
+	color:#FC9505;
+}
+
+#blocoTratamento label.tituloTratamentos {
+	display:block;
+	background:#6AADBB;
+	font-size:0.929em;
+	color:#FFF;
+	margin:0 0 5px -10px!important;
+	width: 100%;
+	padding:0 20px 0 0;
+}
+
+.opcoesTratamento {
+	background: none repeat scroll 0 0 #BCDBE1;
+	margin-bottom: 10px;
+	padding: 0 10px 10px 10px;
+	display:inline;
+	float:left;
+	text-transform:uppercase;
+}
+
+.opcoesTratamento input{
+	margin-right:5px;
+}
+.displayInline {
+	display:inline;
+	float:left;
+	width:380px;
+	margin-bottom:6px;
+}
+
+.diminuirLargura{
+	width:250px;
+}
+
+.margemEsquerda {
+	margin-left:10px;
+}
+
+.alinhamentoDireita {
+	width:150px;
+	text-align:right;
+	display:block;
+
+}
+
+#sexo, #idade, #inicioTratamento, #fimTratamento, #resultadoTratamento, #filtrarDente {
+	float:left;
+	clear:both;
+	margin:0 10px 0 0!important;
+}
+
+#matchCode{
+	float:left;
+	clear:both;
+}
+
+#blocoTratamento label {
+	margin: 0 10px 8px 0 !important;
+}
+
+.elementosFormulario2 {
+	margin:10px 0;
+}
+
+caption {
+	display:none;
+}
+
+.tabelaDentes {
+	width:auto;
+	display: inline-table;
+	padding:0;
+	margin-right:30px;
+}
+
+.tabelaDentes tbody {
+	border:none;
+}
+
+.tabelaDentes tbody th {
+	background:#26899D;
+	font-size:0.929em;
+	color:#FFF;
+	margin-bottom:10px;
+	padding:0;
+}
+
+.tabelaDentes td {
+	border:solid 1px #EAF2F4;
+	width:29px;
+	height:55px;
+	padding:0;
+	background:#FFFFFF;
+	border-collapse:separate;
+}
+
+.tabelaDentes td.selected {
+	border:solid 1px #FC9505;
+	width:29px;
+	height:55px;
+	padding:0;
+	background:#FFFFFF;
+	border-collapse:separate;
+}
+
+
+.tabelaDentes tbody tr:hover {
+	cursor:pointer;
+	background:#FFF;
+	color:#333333;
+}
+.tabelaDentes td a {
+	display:block;
+	margin:0;
+	text-align:center;
+	background:#A8D0D8;
+	font-size:0.929em;
+	text-decoration:none;
+	color:#333;
+	width:100%;
+}
+
+.tabelaDentes th:after{
+	color: #EAF2F4;
+    content: "-";
+    display: block;
+    line-height: 4px;
+	background:#EAF2F4;
+}
+
+.tabelaDentesth:before{
+	color: #EAF2F4;
+    content: "-";
+    display: block;
+    line-height: 15px;
+	background:#EAF2F4;
+}
+
+.tabelaDentes td img {
+	display:block;
+	margin:auto;
+}
+
+.cabecalhoArcada, .tabelaDentes tbody .cabecalhoArcada:hover  {
+	background:#EAF2F4 !important;
+	font-size:0.929em;
+	color:#5AA5B5 !important;
+	text-align:left;
+	cursor:default;
+}
+
+#exibeResultados p {
+	margin:0 0 5px 0;
+}
+
+.tabelaDentes button {
+	margin-top:15px;
+}
+
+.sexo, .resultado, .data{
+	width:12%;
+}
+
+.opcoesEstatisticas, .dente{
+	width:5%;
+}
+
+.matchCode{
+	width:6%;
+}
+
+/*CADASTRO DE PLANO*/
+
+.cadastro_plano label{
+	display:block;
+	float:left;
+	width:140px;
+	text-align:right;
+}
+
+.cadastro_plano input{
+	width:480px;
+}
+
+.inputMenor{
+	width:150px !important;
+}
+
+.alinhamentoDireita2 {
+	display: block;
+    text-align: right;
+    width: 150px;
+	float:left;
+	clear: left;
+}
+
+#formularioTratamento p {
+	margin:10px 20px 0 0 !important;
+}
+
+#formularioTratamento select {
+	margin:10px 20px 0 0 !important;
+}
+
+#formularioTratamento label {
+	margin:10px 20px 0 0 !important;
+}
+
+#formularioTratamento textarea {
+	margin:10px 20px 0 0 !important;
+	height:130px;
+}
+
+#cadastroTratamento p, #cadastroTratamento label, #cadastroTratamento select, #cadastroTratamento textarea, #cadastroTratamento input {
+	margin:5px !important;
+}
+
+#tipo_tratamento{
+	width:160px;
+}
+
+.numeroPLano{
+	width:5%;
+}
+
+.nomePLano{
+	text-align:left;
+	padding-left:30px;
+}
+
+.codigoPLano{
+	width:15%;
+}
+
+.telefonePLano{
+	width:10%;
+}
+
+.celularPLano{
+	width:10%;
+}
+
+.emailPLano{
+	width:15%;
+}
+
+.opcoesPlano, .opcoesDocumentos, .opcoesEspecialidades{
+	width:5%;
+}
+
+/*ESPECIALIDADE*/
+
+.especialidade{
+	text-align:left;
+	padding-left:30px;
+}
+
+.opcoesEspecialidades, .opcoesUsuarios{
+	width:7%;
+}
+
+/*PROCEDIMENTO*/
+
+.tipo{
+	width:15%;
+}
+
+/*USUÁRIOS*/
+
+.ultimoAcesso{
+	width:15%;
+}
+
+.tipoAcesso{
+	width:8%;
+}
+
+.usuario, .procedimento {
+	text-align:left;
+	padding-left:30px;
+	cursor:pointer;
+}
+
+/*DOCUMENTOS*/
+
+.operacoes{
+	width:7%;
+}
+
+.dataInicio{
+	width:8%;
+}
+
+.especialidadeDocumentos{
+	width:15%;
+}
+
+.tratamentosDocumentos{
+	width:15%;
+}
+
+a.download{
+	background:url(../img/Doc-Download.gif) no-repeat;
+}
+
+.observacoes{
+	text-align:left;
+	padding-left:30px;
+}
+
+/*GRÁFICO*/
+
+#filtroGrafico{
+	
+width:300px;
+float:left;
+}
+
+/*RODAPE*/
+
+#rodape {
+	position:absolute;
+	background:url(../img/alfinete_rodape_sombra.png) bottom left repeat-x;
+	height:54px;
+	z-index:2;
+	bottom:0;
+	width: 98%;
+}
+
+#rodape p {
+	background: none repeat scroll 0 0 #333333;
+    color: #C0C0C0;
+    height: 30px;
+    margin:0;
+    padding-top: 4px;
+    text-align: center;
+}
+
+#fundoRodape {
+	background:url(../img/alfinete_rodape.png) repeat-x;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	height:243px;
+	z-index:0;
+}
+
+#sombraEsq {
+	background:url(../img/sombra_esq.png) bottom right no-repeat;
+	float:left;
+	height:100%;
+	width:1%;
+}
+
+#sombraDir {
+	background:url(../img/sombra_dir.png) bottom left no-repeat;
+	float:right;
+	height:100%;
+	width:1%;
+}
+
+/* AGENDA */
+a.editarConsulta {
+	background:url(../img/date_edit.gif) no-repeat;
+}
+
+#status{
+	position:fixed;
+	width:100%;
+	z-index:4;
+}
+
+.st_success{
+	background: none repeat scroll 0 0 #66FF99;
+    border-bottom: 1px solid #009966;
+}
+
+#calendario{
+	border-spacing:4px;
+	margin-bottom:40px;
+}
+
+.agenda div, .separa{
+	border-top: 2px dashed #BDD2D7;
+    margin-top: -2px;
+	padding-top:30px;
+}
+
+#calendario tbody{
+	border:none;
+}
+
+#calendario th, #calendario td{
+	height:40px;
+}
+
+#calendario th{
+	background:#5EA8B7;
+	color:#FFF;
+	width:10%;
+}
+
+#calendario td, #calendario tr:hover{
+	background:#CCC;
+	padding:0;
+	color:#333;
+	width:10%;
+}
+
+#calendario td:hover, #calendario td.s, #calendario td.s span{
+	background:#FC9505;
+	cursor:pointer;
+	color:#FFF;
+}
+
+#calendario .celulaBranco, #calendario .celulaBranco:hover, .celulaBranco{
+	background:#FFF;
+	cursor:default;
+}
+
+#calendario thead:after{
+	content:"";
+}
+
+#calendario span{
+	background:#198399;
+	display:block;
+	float:left;
+	width:40px;
+	height:48px;
+	color:#FFF;
+	font-weight:bold;
+	font-size:1.572em;
+	line-height:2.2em;
+}
+
+#agendamento a{
+	float:right;
+}
+
+#agendamento td{
+	padding:0;
+}
+
+.celulaHorarioAgenda{
+	width:8%;
+}
+
+th.celulaPacienteAgenda, th.celulaPlanoAgenda, th.celulaTratamentosAgenda {
+	background:#198399 !important;
+}
+
+.celulaPacienteAgenda{
+	width:30%;
+	text-align:left;
+	display:table-cell !important;
+	background:none !important;
+	
+	-moz-border-radius:0 !important;
+	-webkit-border-radius:0 !important;
+	border-radius:0 !important;
+}
+
+.celulaPlanoAgenda{
+	display:table-cell !important;
+	background:none !important;
+	
+	-moz-border-radius:0 !important;
+	-webkit-border-radius:0 !important;
+	border-radius:0 !important;	
+}
+
+.celulaTratamentosAgenda{
+	width:30%;
+	text-align:left;
+	display:table-cell !important;
+	background:none !important;
+	
+	-moz-border-radius:0 !important;
+	-webkit-border-radius:0 !important;
+	border-radius:0 !important;
+}
+
+.marcarConsulta{
+	background:url(../img/date_new.gif);
+}
+
+.desmarcarConsulta{
+	background:url(../img/date_delete.gif);
+}
+
+.estenderConsulta{
+	background:url(../img/arrow_up.gif);
+}
+
+.diminuirConsulta{
+	background:url(../img/arrow_down.gif);
+}
+
+.consultaMarcadaPaciente{
+	background:#F4B760;
+	display:block;
+    margin:5px 0 5px 5px;
+	min-height:45px;
+	padding:10px 0 0 20px;
+	
+	-moz-border-radius:10px 0 0 10px;
+	-webkit-border-radius:10px 0 0 10px;
+	border-radius:10px 0 0 10px;
+	behavior:url(js/PIE.htc);
+}
+
+.mt .consultaMarcadaPaciente{
+	margin: 5px 0 0 5px;
+	-moz-border-radius:10px 0 0 0;
+	-webkit-border-radius:10px 0 0 0 ;	
+	border-radius:10px 0 0 0 ;
+	behavior:url(js/PIE.htc);
+}
+
+.mc .consultaMarcadaPaciente{
+	margin: 0 0 0 5px;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+
+.mb .consultaMarcadaPaciente{
+	margin:0 0 5px 5px;
+	-moz-border-radius:0 0 0 10px;
+	-webkit-border-radius:0 0 0 10px;
+	border-radius:0 0 0 10px;
+	behavior:url(js/PIE.htc);
+}
+
+.consultaMarcadaPlano{
+	background:#F4B760;
+	display:block;
+    margin: 5px 0 5px -5px;
+	min-height:45px;
+	padding:10px 0 0 20px;
+	text-align:left;
+}
+
+.mt .consultaMarcadaPlano{
+	margin:5px 0 0 0;
+}
+
+.mc .consultaMarcadaPlano{
+	margin:0;
+}
+
+.mb .consultaMarcadaPlano{
+	margin:0 0 5px 0;
+}
+
+.consultaMarcadaTratamento{
+	background:#F4B760;
+	display:block;	
+    margin: 5px 0 5px -5px;
+	width:90%;
+	height:45px;
+	text-align:left;
+	padding:10px 0 0 5%;
+	float:left;
+	
+	margin:5px 0 5px -5px;
+	-moz-border-radius:0 10px 10px 0;
+	-webkit-border-radius:0 10px 10px 0;
+	border-radius:0 10px 10px 0;
+	behavior:url(js/PIE.htc);
+}
+
+.mt .consultaMarcadaTratamento{
+	margin: 5px 0 0 0 !important;
+	-moz-border-radius:0 10px 0 0 ;
+	-webkit-border-radius:0 10px 0 0 ;	
+	border-radius:0 10px 0 0 ;	
+	behavior:url(js/PIE.htc);
+}
+
+.mc .consultaMarcadaTratamento{
+	margin:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+
+.mb .consultaMarcadaTratamento{
+	margin:0 0 5px 0;
+	-moz-border-radius:0 0 5px 0;
+	-webkit-border-radius:0 0 5px 0;
+	border-radius:0 0 5px 0;
+	behavior:url(js/PIE.htc);
+}
+
+#agendamento tbody td{
+	height:50px;
+	vertical-align:middle;
+}
+
+h4{
+	color:#00537A;
+	font-size:1.714em;
+	margin:0;
+}
+
+.salvar{
+	background:url(../img/save.gif);
+}
+
+
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  #tudo{
+	  min-width:100%;
+	  height:100%;
+  }
+  #conteudo{
+	  border:none;
+  }
+  button,  .botaoPositivo, #cd_field{
+	  display:none;
+  }
+}

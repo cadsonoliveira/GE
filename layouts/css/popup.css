@@ -1,0 +1,108 @@
+.g_modal, .win, #login_home {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.g_modal {
+	background: #000;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 3;
+}
+
+.win {
+	background:#FFF;
+	border:25px solid #5E7D84;
+	width: 598px;
+	padding:10px;
+	z-index:12;
+}
+
+.win .closer {
+	color: #FFF;
+	font-size: 1em;
+	height: 20px;
+	cursor: pointer;
+	margin:-60px -30px 0 0;
+	float:right;
+	font-weight:bold;
+}
+
+.win .closer:hover {
+	color:#F00;
+}
+
+.win ul{
+	list-style:none;
+	padding:0 10px;
+}
+
+.win label{
+	display:block;
+	margin:5px 0;
+	color:#333333;
+}
+
+.win textarea{
+	width:99% !important;
+}
+
+.win h1 {
+	background: #198399;
+	color: #FFF;
+	font-size:1.286em;
+	padding: 5px 10px;
+	margin:0;
+}
+
+.win p {
+	margin: 3px;
+	color: #333;
+	font-size: 11px;
+}
+
+.bt_left{
+	text-align:center;
+	margin:30px 0;
+}
+
+.mb{
+	background:#003F6D;
+	display:inline;
+	padding:15px 35px;
+	font-weight:bold;
+	font-size:1.286em;
+	color:#FFF;
+	
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	cursor:pointer;
+}
+
+.mb:hover{
+	color:#FFF;
+	background:#33658A;
+}
+
+.win .status {
+	font-size: 11px;
+	margin: 10px;
+	padding: 5px;
+	width: 568px;
+	float: left;
+	clear: both;
+}
+
+.win button.time_changer {
+	width: 20px;
+	height: 28px;
+	padding: 0 3px;
+}
+
+.field label, .field input{
+	/*display:inline;*/
+	margin-right:10px;
+}
